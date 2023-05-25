@@ -1,3 +1,4 @@
+import 'package:advanced_theming/app/data/extension_f.dart';
 import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,7 +11,7 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Scheme: ${controller.scheme.value.name}'),
+        title: Text('Scheme: ${controller.scheme.value.schemeName}'),
         centerTitle: true,
         actions: const [],
       ),
@@ -99,6 +100,30 @@ class HomeView extends GetView<HomeController> {
                   height: 100,
                   width: 100,
                   color: Theme.of(context).scaffoldBackgroundColor,
+                ),
+              ],
+            ),
+            Wrap(
+              children: [
+                Container(
+                  height: 150,
+                  width: 150,
+                  color: Theme.of(context).primaryColorLight,
+                ),
+                Container(
+                  height: 150,
+                  width: 150,
+                  color: Theme.of(context).primaryColorDark,
+                ),
+                Container(
+                  height: 150,
+                  width: 150,
+                  color: Theme.of(context).primaryColor,
+                ),
+                Container(
+                  height: 150,
+                  width: 150,
+                  color: Theme.of(context).secondaryHeaderColor,
                 ),
               ],
             ),
